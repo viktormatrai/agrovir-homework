@@ -7,4 +7,12 @@ create table if not exists locations
     unique (location)
 );
 
+ALTER TABLE locations
+insert into agrovir_homework.locations (location) values ('Budapest');
+ALTER TABLE locations
+insert into agrovir_homework.locations (location) values ('Kaposvár');
+ALTER TABLE locations
+insert into agrovir_homework.locations (location) values ('Keszthely');
+ALTER TABLE locations
+insert into agrovir_homework.locations (location) values ('Tokaj');
 
