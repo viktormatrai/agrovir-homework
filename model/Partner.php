@@ -20,15 +20,17 @@ class Partner extends Model
                            $bankAccount,
                            $phone,
                            $companyType,
-                           $location)
+                           $location,
+                           $note)
     {
         $sql = "INSERT INTO partners (company_name, tax_number, 
                                       company_registration_number, address, 
-                                      bank_account_number, phone_number, company_type_id, location_id) 
+                                      bank_account_number, phone_number, company_type_id, location_id, note) 
                 VALUES (:company_name, :tax_number, :company_registration_number, 
                         :address, :bank_account_number, :phone_number, 
-                        SELECT id FROM company_types WHERE company_type LIKE $companyType,
-                        SELECT id FROM locations WHERE location LIKE $location)";
+                        SELECT id FROM company_types WHERE type LIKE $companyType,
+                        SELECT id FROM locations WHERE location LIKE $location,
+                        :note)";
         $req = Database::getData()->prepare($sql);
         return $req->execute([
             'company_name' => $companyName,
@@ -39,6 +41,7 @@ class Partner extends Model
             'phone_number' => $phone,
             'company_type_id' => $companyType,
             'location_id' => $location,
+            'note' => $note
         ]);
     }
 

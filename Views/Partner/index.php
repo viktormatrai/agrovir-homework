@@ -21,7 +21,7 @@
         {
             echo '<tr>';
             echo "<td>" . $partner['company_name'] . "</td>";
-            echo "<td>" . $partner['type'] . "</td>";
+            echo "<td>" . $partner['company_type'] . "</td>";
             echo "<td>" . $partner['tax_number'] . "</td>";
             echo "<td>" . $partner['company_registration_number'] . "</td>";
             echo "<td>" . $partner['address'] . "</td>";

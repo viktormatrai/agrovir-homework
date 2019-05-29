@@ -5,23 +5,44 @@ class PartnerController extends Controller
     function index()
     {
         require(ROOT . 'model/Partner.php');
-        $tasks = new Partner();
-        $d['partners'] = $tasks->showAllPartners();
+        $partners = new Partner();
+        $d['partners'] = $partners->showAllPartners();
         $this->set($d);
         $this->render("index");
     }
-    /*function create()
+    function create()
     {
-        if (isset($_POST["title"]))
+        if (isset($_POST["companyName"]))
         {
-            require(ROOT . 'Models/Task.php');
-            $task= new Task();
-            if ($task->create($_POST["title"], $_POST["description"]))
+            require(ROOT . 'model/partner.php');
+            $partner= new Partner();
+            if ($partner->create($_POST["companyName"],
+                $_POST["taxNumber"],
+                $_POST["companyRegistrationNumber"],
+                $_POST["address"],
+                $_POST["bankAccount"],
+                $_POST["phone"],
+                $_POST["companyType"],
+                $_POST["location"],
+                $_POST["note"]
+                ))
+
             {
-                header("Location: " . WEBROOT . "tasks/index");
+                header("Location: " . WEBROOT . "partner/index");
             }
         }
         $this->render("create");
-    }*/
+    }
+
+    function delete($id)
+    {
+        require(ROOT . 'Models/Partner.php');
+        $partner = new Partner();
+        if ($partner->delete($id))
+        {
+            header("Location: " . WEBROOT . "Partner/index");
+        }
+    }
+
 
 }
