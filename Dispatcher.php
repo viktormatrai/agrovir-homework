@@ -12,7 +12,7 @@ class Dispatcher
     public function loadController()
     {
         $name = $this->request->controller . "Controller";
-        $file = ROOT . 'controller/' . $name . '.php';
+        $file = ROOT . 'controller/' . ucfirst($name) . '.php';
         require($file);
         $controller = new $name();
         return $controller;
