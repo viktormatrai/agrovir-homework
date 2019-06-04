@@ -39,19 +39,15 @@
             echo "<div id= 'deleteModal' class='modal fade'>
                     <div class= 'modal-dialog modal-confirm'>
                         <div class='modal-content'>
-                            <div class='modal-header'>
-                                <div class='icon-box'>
-                                    <i class='material-icons'>&#xE5CD;</i>
-                                </div>				
-                                <h4 class='modal-title'>Are you sure?</h4>	
-                                <button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button>
+                            <div class='modal-header'>				
+                                <h4 class='modal-title'>Biztos törölni szeretné a partnert?</h4>	
                             </div>
                             <div class='modal-body'>
-                                <p>Do you really want to delete this partner?</p>
+                                <p>  $partner[company_name] $partner[company_type] </p>
                             </div>
                             <div class='modal-footer'>
-                                <button type='button' class='btn btn-info' data-dismiss='modal'>Cancel</button>
-                                <button type= button' class='btn btn-danger'> Delete</button>
+                                <button type='button' class='btn btn-info' data-dismiss='modal'>Mégse</button>
+                                <button type= submit' class='btn btn-danger'>Törlés</button>
                             </div>
                         </div>
                     </div>
