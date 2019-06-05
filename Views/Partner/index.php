@@ -139,7 +139,7 @@
                             </div>
                             <div class='modal-footer'>
                                 <button type='button' class='btn btn-info' data-dismiss='modal'>Mégse</button>
-                                <button type= submit' class='btn btn-danger'>Törlés</button>
+                                <a href='' type=  class='btn btn-danger'>Törlés</a>
                             </div>
                         </div>
                     </div>

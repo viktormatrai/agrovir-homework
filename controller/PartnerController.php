@@ -14,7 +14,7 @@ class PartnerController extends Controller
     {
         if (isset($_POST["companyName"]))
         {
-            require(ROOT . 'model/partner.php');
+            require(ROOT . 'model/Partner.php');
             $partner= new Partner();
             if ($partner->create($_POST["companyName"],
                 $_POST["taxNumber"],
@@ -31,12 +31,12 @@ class PartnerController extends Controller
                 header("Location: " . WEBROOT . "partner/index");
             }
         }
-        $this->render("create");
+        $this->render("index");
     }
 
     function delete($id)
     {
-        require(ROOT . 'Models/Partner.php');
+        require(ROOT . 'model/Partner.php');
         $partner = new Partner();
         if ($partner->delete($id))
         {

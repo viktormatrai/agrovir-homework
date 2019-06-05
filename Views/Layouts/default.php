@@ -46,15 +46,15 @@
                     </button>
                 </div>
                 <div class="modal-body mx-3">
-                    <form method="post" action="<?php $_SERVER['PHP_SELF']?>">
+                    <form method="post" action="/partner/create">
                     <div class="md-form mb-5">
                         <i class="fas fa-user prefix grey-text"></i>
-                        <input type="text" id="orangeForm-name" class="form-control validate" required>
+                        <input type="text" id="orangeForm-name" class="form-control validate" required name="companyName">
                         <label data-error="wrong" data-success="right" for="orangeForm-name">Cégnév</label>
                     </div>
                     <div class="md-form mb-5">
                         <i class="fas fa-envelope prefix grey-text"></i>
-                        <select class="form-control" required>
+                        <select class="form-control" required name="companyType">
                             <option value="Nyrt.">Nyrt.</option>
                             <option value="Zrt.">Zrt.</option>
                             <option value="Kft.">Kft.</option>
@@ -66,43 +66,43 @@
 
                     <div class="md-form mb-4">
                         <i class="fas fa-lock prefix grey-text"></i>
-                        <input type="text" id="orangeForm-pass" class="form-control validate" required>
+                        <input type="text" id="orangeForm-pass" class="form-control validate" required name="taxNumber">
                         <label data-error="wrong" data-success="right" for="orangeForm-pass">Adószám</label>
                     </div>
 
                     <div class="md-form mb-4">
                         <i class="fas fa-lock prefix grey-text"></i>
-                        <input type="text" id="orangeForm-pass" class="form-control validate" required>
+                        <input type="text" id="orangeForm-pass" class="form-control validate" required name="companyRegistrationNumber">
                         <label data-error="wrong" data-success="right" for="orangeForm-pass">Cégjegyzék szám</label>
                     </div>
 
                     <div class="md-form mb-4">
                         <i class="fas fa-lock prefix grey-text"></i>
-                        <input type="text" id="orangeForm-pass" class="form-control validate" required>
+                        <input type="text" id="orangeForm-pass" class="form-control validate" required name="location">
                         <label data-error="wrong" data-success="right" for="orangeForm-pass">Város</label>
                     </div>
 
                     <div class="md-form mb-4">
                         <i class="fas fa-lock prefix grey-text"></i>
-                        <input type="text" id="orangeForm-pass" class="form-control validate" required>
+                        <input type="text" id="orangeForm-pass" class="form-control validate" required name="address">
                         <label data-error="wrong" data-success="right" for="orangeForm-pass">Cím</label>
                     </div>
 
                     <div class="md-form mb-4">
                         <i class="fas fa-lock prefix grey-text"></i>
-                        <input type="text" id="orangeForm-pass" class="form-control validate" required>
+                        <input type="text" id="orangeForm-pass" class="form-control validate" required name="bankAccount">
                         <label data-error="wrong" data-success="right" for="orangeForm-pass">Bankszámla szám</label>
                     </div>
 
                     <div class="md-form mb-4">
                         <i class="fas fa-lock prefix grey-text"></i>
-                        <input type="text" id="orangeForm-pass" class="form-control validate" required>
+                        <input type="text" id="orangeForm-pass" class="form-control validate" required name="phone">
                         <label data-error="wrong" data-success="right" for="orangeForm-pass">Telefonszám</label>
                     </div>
 
                     <div class="md-form mb-4">
                         <i class="fas fa-lock prefix grey-text"></i>
-                        <textarea type="text" id="orangeForm-pass" class="form-control validate"></textarea>
+                        <textarea type="text" id="orangeForm-pass" class="form-control validate" name="note"></textarea>
                         <label data-error="wrong" data-success="right" for="orangeForm-pass">Megjegyzés</label>
                     </div>
                 </div>
