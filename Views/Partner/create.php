@@ -1,5 +1,5 @@
 <h1>Új partner hozzáadása</h1>
-<form method='post' action='Partners/create'>
+<form method='post' action='index'>
     <div class="form-group w-50">
         <label for="title">Cég neve</label>
         <input type="text"
