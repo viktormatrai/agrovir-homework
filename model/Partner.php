@@ -28,21 +28,27 @@ class Partner extends Model
                                       bank_account_number, phone_number, company_type_id, location_id, note) 
                 VALUES (:company_name, :tax_number, :company_registration_number, 
                         :address, :bank_account_number, :phone_number, 
-                        SELECT id FROM company_types WHERE type LIKE $companyType,
-                        SELECT id FROM locations WHERE location LIKE $location,
+                        (SELECT id FROM company_types WHERE type LIKE :company_type),
+                        (SELECT id FROM locations WHERE location LIKE :location),
                         :note)";
         $req = Database::getData()->prepare($sql);
-        return $req->execute([
+        try{
+        $result = $req->execute([
             'company_name' => $companyName,
             'tax_number' => $taxNumber,
             'company_registration_number' => $companyRegistrationNumber,
             'address' => $address,
             'bank_account_number' => $bankAccount,
             'phone_number' => $phone,
-            'company_type_id' => $companyType,
-            'location_id' => $location,
+            'company_type' => $companyType,
+            'location' => $location,
             'note' => $note
         ]);
+        print_r($result);
+        print_r("dsadssdad");
+        return $result;
+        } catch ( Exception $e)
+            {print_r($e);}
     }
 
     public function edit($companyName,

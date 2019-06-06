@@ -1,9 +1,8 @@
 
-<h1>Partners</h1>
+<h1>Partnerek</h1>
 <div class="row col-md-12 centered">
     <table class="table table-hover">
         <thead>
-        <!--<a href="/agrovir-homework/partners/create/" class="btn btn-primary btn-xs pull-right"><b>+</b> Add new task</a>-->
         <tr>
             <th>Cégnév</th>
             <th>Cégforma</th>
@@ -33,7 +32,7 @@
                          data-target='#editModal'
                          style='text-decoration: none' 
                          data-toggle='modal' 
-                         class='btn btn-primary'>Edit</a>
+                         class='btn btn-primary'>Szerkesztés</a>
                  </td>";
 
             echo "<div class='modal fade' id='editModal' tabindex='-1' role='dialog' aria-labelledby='Edit partner'
@@ -126,7 +125,7 @@
                             data-target = '#deleteModal'
                             class='btn btn-danger' 
                             style='text-decoration: none' 
-                            data-toggle='modal'>Delete</a>
+                            data-toggle='modal'>Törlés</a>
                     </td>";
             echo "<div id= 'deleteModal' class='modal fade'>
                     <div class= 'modal-dialog modal-confirm'>
@@ -139,7 +138,7 @@
                             </div>
                             <div class='modal-footer'>
                                 <button type='button' class='btn btn-info' data-dismiss='modal'>Mégse</button>
-                                <a href='' type=  class='btn btn-danger'>Törlés</a>
+                                <a href='#' class='btn btn-danger'>Törlés</a>
                             </div>
                         </div>
                     </div>
