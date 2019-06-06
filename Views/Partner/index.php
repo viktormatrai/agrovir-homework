@@ -50,12 +50,12 @@
                                 <div class='md-form mb-5'>
                                     <i class='fas fa-user prefix grey-text'></i>
                                     <input type='text' id='orangeForm-name' class='form-control validate' required 
-                                    value=$partner[company_name]>
+                                    value=$partner[company_name] name='companyName'>
                                     <label data-error='wrong' data-success='right' for='orangeForm-name'>Cégnév</label>
                                 </div>
                                 <div class='md-form mb-5'>
                                     <i class='fas fa-envelope prefix grey-text'></i>
-                                    <select class='form-control' required>
+                                    <select class='form-control' required name='companyType'>
                                         <option value='Nyrt.'>Nyrt.</option>
                                         <option value='Zrt.'>Zrt.</option>
                                         <option value='Kft.'>Kft.</option>
@@ -68,49 +68,49 @@
                                 <div class='md-form mb-4'>
                                     <i class='fas fa-lock prefix grey-text'></i>
                                     <input type='text' id='orangeForm-pass' class=\"form-control validate\" required
-                                    value=$partner[tax_number]>
+                                    value=$partner[tax_number] name='taxNumber'>
                                     <label data-error='wrong' data-success='right' for='orangeForm-pass'>Adószám</label>
                                 </div>
             
                                 <div class='md-form mb-4'>
                                     <i class='fas fa-lock prefix grey-text'></i>
                                     <input type='text' id='orangeForm-pass' class='form-control validate' required 
-                                    value=$partner[company_registration_number]>
+                                    value=$partner[company_registration_number] name='companyRegistrationNumber'>
                                     <label data-error='wrong' data-success='right' for='orangeForm-pass'>Cégjegyzék szám</label>
                                 </div>
             
                                 <div class='md-form mb-4'>
                                     <i class='fas fa-lock prefix grey-text'></i>
                                     <input type='text' id='orangeForm-pass' class='form-control validate' required
-                                    value=$partner[location]>
+                                    value=$partner[location] name='location'>
                                     <label data-error='wrong' data-success='right' for='orangeForm-pass'>Város</label>
                                 </div>
             
                                 <div class='md-form mb-4'>
                                     <i class='fas fa-lock prefix grey-text'></i>
                                     <input type='text' id='orangeForm-pass' class='form-control validate' required
-                                    value=$partner[address]>
+                                    value=$partner[address] name='address'>
                                     <label data-error='wrong' data-success='right' for='orangeForm-pass'>Cím</label>
                                 </div>
             
                                 <div class='md-form mb-4'>
                                     <i class='fas fa-lock prefix grey-text'></i>
                                     <input type='text' id='orangeForm-pass' class='form-control validate' required
-                                    value=$partner[bank_account_number]>
+                                    value=$partner[bank_account_number] name= 'bankAccount'>
                                     <label data-error='wrong' data-success='right' for='orangeForm-pass'>Bankszámla szám</label>
                                 </div>
             
                                 <div class='md-form mb-4'>
                                     <i class='fas fa-lock prefix grey-text'></i>
                                     <input type='text' id='orangeForm-pass' class='form-control validate' required
-                                    value=$partner[phone_number]>
+                                    value=$partner[phone_number] name='phone'>
                                     <label data-error='wrong' data-success='right' for='orangeForm-pass'>Telefonszám</label>
                                 </div>
             
                                 <div class='md-form mb-4'>
                                     <i class='fas fa-lock prefix grey-text'></i>
-                                    <textarea type='text' id='orangeForm-pass' class='form-control validate'
-                                     >$partner[note]</textarea>
+                                    <textarea type='text' id='orangeForm-pass' 
+                                              class='form-control validate' name='note'>$partner[note]</textarea>
                                     <label data-error='wrong' data-success='right' for='orangeForm-pass'>Megjegyzés</label>
                                 </div>
                             </div>

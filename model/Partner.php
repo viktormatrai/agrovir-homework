@@ -66,7 +66,7 @@ class Partner extends Model
                                     address = :address,
                                     bank_account_number = :bank_account_number,
                                     phone_number = :phone_number,
-                WHERE id = :id";
+                WHERE id = {$_POST['id']}";
         $req = Database::getData()->prepare($sql);
         return $req->execute([
             'company_name' => $companyName,

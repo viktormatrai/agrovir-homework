@@ -9,10 +9,10 @@
     <link href="starter-template.css" rel="stylesheet">
 
     <style>
-                                                                                         body {
+        body {
             padding-top: 5rem;
         }
-                                                                                         .starter-template {
+        .starter-template {
             padding: 3rem 1.5rem;
             text-align: center;
         }
